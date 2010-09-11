@@ -38,7 +38,8 @@ setup(name = "github",
 
       license = 'MIT',
 
-      packages = find_packages(),
+      packages = find_packages("src"),
+      package_dir = {"": "src"},
 
       zip_safe = True,
 
