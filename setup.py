@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 #
 # Copyright (c) 2005-2008  Dustin Sallings <dustin@spy.net>
+# Copyright (c) 2010 DataDog, Inc. <info@datadoghq.com>
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -27,7 +28,7 @@ Standard build script.
 
 import sys
 import os
-from setuptools import setup, find_packages
+from setuptools import setup
 
 
 setup(name = "github",
@@ -38,8 +39,8 @@ setup(name = "github",
 
       license = 'MIT',
 
-      packages = find_packages("src"),
-      package_dir = {"": "src"},
+      packages = ["github"],
+      package_dir = {"github": "src"},
 
       zip_safe = True,
 
