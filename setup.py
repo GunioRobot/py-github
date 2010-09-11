@@ -27,7 +27,7 @@ Standard build script.
 
 import sys
 import os
-from distutils.core import setup
+from setuptools import setup, find_packages
 
 
 setup(name = "github",
@@ -38,8 +38,9 @@ setup(name = "github",
 
       license = 'MIT',
 
-      package_dir={'github': 'src'},
-      packages = ['github'],
+      packages = find_packages(),
+
+      zip_safe = True,
 
       classifiers=['MIT License',
                    'Development Status :: 5 - Production/Stable',
